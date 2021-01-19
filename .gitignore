@@ -30,4 +30,8 @@ pnpm-debug.log*
 *.sln
 *.sw?
 
-
+# Personal files to avoid mistakes
+commit
+diff
+foo
+log
