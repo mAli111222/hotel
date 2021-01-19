@@ -2,7 +2,7 @@ The general navbar for our project
 <template>
 	<div class="navbar-wrapper">
 		<div class="nav-title flex-item">
-			PDX Nurse Furnishing
+			PDX Nurse Rental
 		</div>
 		<div class="nav-links flex-item">
 			<router-link to="/">
@@ -29,14 +29,14 @@ export default {
 
 	.flex-item {
 		@v-padding: 30px;
-		flex: 1 1 160px;
+		@h-padding: 15px;
 		padding-bottom: @v-padding;
+		padding-left: @h-padding;
+		padding-right: @h-padding;
 		padding-top: @v-padding;
 	}
 	.nav-links {
 		margin-left: auto;
-		position: relative;
-		width: 100%;
 	}
 	.nav-title {
 		margin-right: auto;
