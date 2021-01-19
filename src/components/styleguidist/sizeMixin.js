@@ -7,8 +7,8 @@ module.exports = {
 		 * Set size of the element
 		 */
 		size: {
-			type: String,
 			default: "14px",
+			type: String,
 		},
 	},
 }

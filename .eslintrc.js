@@ -11,91 +11,23 @@ module.exports = {
 		"eslint:recommended"
 	],
 	"overrides": [
+		// Do not worry about svg line length
+		{
+			"files": [
+				"**/svgs/*",
+			],
+			"rules": {
+				"max-len": "off",
+			},
+		},
+
 		// Apply custom .vue files extension rules
 		{
 			"files": [
 				"*.vue"
 			],
 			"rules": {
-				"vue/component-definition-name-casing": [
-					"error",
-					"PascalCase"
-				],
-				"vue/component-name-in-template-casing": [
-					"error",
-					"PascalCase",
-					// All options currently default
-					{
-						"registeredComponentsOnly": true,
-						"ignores": [],
-					}
-				],
-				"vue/html-indent": [
-					"error",
-					"tab",
-					// All options currently default
-					{
-						"alignAttributesVertically": true,
-						"attribute": 1,
-						"baseIndent": 1,
-						"closeBracket": 0,
-						"ignores": [],
-					}
-				],
-				"vue/html-quotes": [
-					"error",
-					"double"
-				],
-				"vue/html-self-closing": [
-					"error",
-					{
-						"html": {
-							"component": "always",
-							"normal": "always",
-							"void": "never",
-						},
-						"math": "always",
-						"svg": "always",
-					}
-				],
-				"vue/no-multi-spaces": [
-					"error",
-					// All options currently default
-					{
-						"ignoreProperties": false,
-					}
-				],
-				"vue/no-template-shadow": 2,
-				"vue/prop-name-casing": [
-					"error",
-					"camelCase"
-				],
-				// Does not currently support Allman style
-				//"vue/script-indent": [
-				//	"error",
-				//	"tab",
-				//	{
-				//		"baseIndent": 0,
-				//		"ignores": [],
-				//		"switchCase": 1,
-				//	}
-				//],
-				"vue/singleline-html-element-content-newline": [
-					"error",
-					{
-						"ignores": [
-							"pre",
-							"span",
-							"textarea"
-						],
-						"ignoreWhenEmpty": true,
-						"ignoreWhenNoAttributes": true,
-					}
-				],
-				"vue/this-in-template": [
-					"error",
-					"never"
-				],
+
 				"indent": [
 					"error", 
 					"tab",
@@ -111,18 +43,6 @@ module.exports = {
 					"error",
 					"allman"
 				],
-				"vue/sort-keys": [
-					"error", 
-					"asc", 
-				 	{
-						"caseSensitive": true,
-						"ignoreChildrenOf": ["model"],
-						"ignoreGrandchildrenOf": ["directives", "inject"],
-						"minKeys": 2,
-						"natural": false
-					},
-				 ],
-
 			},
 		},
 		// Isolate some .js specific indents
@@ -290,6 +210,95 @@ module.exports = {
 				},
 			}
 		],
-
+		"vue/component-definition-name-casing": [
+			"error",
+			"PascalCase"
+		],
+		"vue/component-name-in-template-casing": [
+			"error",
+			"PascalCase",
+			// All options currently default
+			{
+				"registeredComponentsOnly": true,
+				"ignores": [],
+			}
+		],
+		"vue/html-indent": [
+			"error",
+			"tab",
+			// All options currently default
+			{
+				"alignAttributesVertically": true,
+				"attribute": 1,
+				"baseIndent": 1,
+				"closeBracket": 0,
+				"ignores": [],
+			}
+		],
+		"vue/html-quotes": [
+			"error",
+			"double"
+		],
+		"vue/html-self-closing": [
+			"error",
+			{
+				"html": {
+					"component": "always",
+					"normal": "always",
+					"void": "never",
+				},
+				"math": "always",
+				"svg": "always",
+			}
+		],
+		"vue/no-multi-spaces": [
+			"error",
+			// All options currently default
+			{
+				"ignoreProperties": false,
+			}
+		],
+		"vue/no-template-shadow": 2,
+		"vue/prop-name-casing": [
+			"error",
+			"camelCase"
+		],
+		// Does not currently support Allman style
+		//"vue/script-indent": [
+		//	"error",
+		//	"tab",
+		//	{
+		//		"baseIndent": 0,
+		//		"ignores": [],
+		//		"switchCase": 1,
+		//	}
+		//],
+		"vue/singleline-html-element-content-newline": [
+			"error",
+			{
+				"ignores": [
+					"pre",
+					"span",
+					"textarea"
+				],
+				"ignoreWhenEmpty": true,
+				"ignoreWhenNoAttributes": true,
+			}
+		],
+		"vue/sort-keys": [
+			"error", 
+			"asc", 
+		 	{
+				"caseSensitive": true,
+				"ignoreChildrenOf": ["model"],
+				"ignoreGrandchildrenOf": ["directives", "inject"],
+				"minKeys": 2,
+				"natural": false
+			},
+		 ],
+		"vue/this-in-template": [
+			"error",
+			"never"
+		],
 	},
 }
