@@ -1,13 +1,17 @@
 The general navbar for our project
 <template>
 	<div class="navbar-wrapper">
-		<div class="nav-title flex-item">
+		<div
+			class="nav-title flex-item"
+			@click="foo"
+		>
 			PDX Nurse Rental
 		</div>
 		<div class="nav-links flex-item">
 			<router-link to="/">
 				Home
-			</router-link> |
+			</router-link>
+			&nbsp;|&nbsp;
 			<router-link to="/about">
 				About
 			</router-link>
@@ -28,17 +32,20 @@ export default {
 	width: 100%;
 
 	.flex-item {
-		@v-padding: 30px;
 		@h-padding: 15px;
+		@v-padding: 10px;
+		@v-margin: 15px;
 		padding-bottom: @v-padding;
 		padding-left: @h-padding;
 		padding-right: @h-padding;
 		padding-top: @v-padding;
 	}
 	.nav-links {
+		background-color: cyan;
 		margin-left: auto;
 	}
 	.nav-title {
+		background-color: blue;
 		margin-right: auto;
 	}
 	a {
