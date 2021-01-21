@@ -6,13 +6,19 @@
 </template>
 
 <script>
+
 // @ is an alias to /src
+import {DB} from "../db.js"
 import HelloWorld from "@/components/HelloWorld.vue"
 
 export default {
 	name: "Home",
 	components: {
 		HelloWorld,
+	},
+	created: function()
+	{
+		console.log(DB)
 	},
 }
 </script>
