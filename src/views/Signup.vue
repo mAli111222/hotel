@@ -1,21 +1,16 @@
 <template>
-	<div class="page-wrapper">
-	</div>
+	<div class="page-wrapper"/>
 </template>
 
 <script>
 export default {
-	name: "",
+	name: "Signup",
 
 	props: {},
 	computed:
-	{
-
-	},
+	{},
 	methods: 
-	{
-
-	},
+	{},
 }
 </script>
 

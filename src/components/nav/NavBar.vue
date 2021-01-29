@@ -7,6 +7,9 @@ The general navbar for our project
 		<router-link to="/about">
 			About
 		</router-link>
+		<router-link to="/signup"> | 
+			Login
+		</router-link>
 	</div>
 </template>
 
