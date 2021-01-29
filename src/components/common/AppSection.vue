@@ -3,7 +3,7 @@
 		class="content-section"
 		:class="getClasses()"
 		:style="styles"
-		@click="isShowing = ignoreClick? isShowing : !isShowing"
+		@click="$emit('click')"
 	>
 		<!-- @slot Use this slot to place the button content -->
 		<slot />
@@ -13,35 +13,30 @@
 <script>
 export default {
 	name: "AppSection",
-	data: function()
-	{
-		return {
-			isShowing: true,
-		}
-	},
 	props:
 	{
 		/**
-		 * When clicked, does the whole component dissapear or just collapse?
-		 * Collapse is default.
+		 * Whether the section is showing in a collapsed state or not
 		 * @since 0.1.0
 		 */
-		dissapears:
+		isCollapsed:
 		{
 			default: false,
 			required: false,
 			type: Boolean,
 		},
+
 		/**
-		 * Whether we are ignoring the click or not
+		 * Whether the section is showing at all or not
 		 * @since 0.1.0
 		 */
-		ignoreClick:
+		isShowing:
 		{
 			default: false,
 			required: false,
 			type: Boolean,
 		},
+
 		/**
 		 * String of styles to be applied to main wrapper;
 		 * @todo Arrange into props and make computed
@@ -65,9 +60,9 @@ export default {
 		getClasses ()
 		{
 			return {
-				"is-collapsed": !this.isShowing && !this.dissapears,
-				"is-hidden": !this.isShowing && this.dissapears,
-				"is-showing": this.isShowing,
+				"is-collapsed": this.isShowing && this.isCollapsed,
+				"is-hidden": !this.isShowing,
+				"is-showing": this.isShowing && !this.isCollapsed,
 			}
 		},
 	},
@@ -107,18 +102,10 @@ css properties.
 
 ## Examples
 
-Non clickable container
+Container that is showing
 
 ```jsx
-<AppSection ignore-click>
-	<div style="height: 50; background-color: red;"/>
-</AppSection>
-```
-
-Dissapearing container
-
-```jsx
-<AppSection dissapears>
+<AppSection is-showing>
 	<div style="height: 50; background-color: red;"/>
 </AppSection>
 ```

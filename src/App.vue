@@ -1,20 +1,32 @@
 <template>
 	<div id="app">
-		<AppSection dissapears>
+		<!-- TODO: Tie into vue comps -->
+		<AppSection
+			:isShowing="$store.state.layout.isShowingBanner"
+			@click="$store.state.layout.isShowingBanner = !$store.state.layout.isShowingBanner"
+		>
 			<div id="top-banner" />
 		</AppSection>
 
-		<AppSection styles="min-height: 20px">
+		<AppSection
+			styles="min-height: 20px"
+			:isCollapsed='isNavCollapsed'
+			is-showing
+			@click="isNavCollapsed = !isNavCollapsed"
+		>
 			<NavBar id="nav-wrapper" />
 		</AppSection>
 
 		<AppSection
 			styles="flex: 1;"
-			ignore-click
+			is-showing
 		>
 			<router-view id="content-wrapper" />
 		</AppSection>
-		<AppSection dissapears>
+		<AppSection
+			:isShowing="$store.state.layout.isShowingFooter"
+			@click="$store.state.layout.isShowingFooter = !$store.state.layout.isShowingFooter"
+		>
 			<div id="bottom-banner" />
 		</AppSection>
 	</div>
@@ -30,6 +42,20 @@ export default {
 	{
 		AppSection,
 		NavBar,
+	},
+	data: function()
+	{
+		return {
+			isNavCollapsed: true,
+		}
+	},
+	computed:
+	{
+
+	},
+	created: function()
+	{
+		console.log(this.$store.state.layout.isShowingBanner)
 	},
 }
 </script>
