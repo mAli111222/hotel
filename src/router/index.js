@@ -1,5 +1,6 @@
 import Vue from "vue"
 import VueRouter from "vue-router"
+import Foobar from "../views/Foobar.vue"
 import Home from "../views/Home.vue"
 import Signup from "../views/Signup.vue"
 
@@ -13,6 +14,11 @@ const routes = [
 		component: () => import(/* webpackChunkName: "about" */ "../views/About.vue"),
 		name: "about",
 		path: "/about",
+	},
+	{
+		component: Foobar,
+		name: "foobar",
+		path: "/foobar",
 	},
 	{
 		component: Home,
