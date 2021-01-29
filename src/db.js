@@ -1,26 +1,21 @@
 import firebase from "firebase/app"
 import "firebase/firestore"
 
-/** Firebase docs */
 // Get a Firestore instance
-export const DB = firebase
-	.initializeApp(
-		{
-			projectId: "MY PROJECT ID", 
-		}
-	)
+export const db = firebase
+	.initializeApp({
+		projectId: "MY PROJECT ID", 
+	})
 	.firestore()
 
 // Export types that exists in Firestore
 // This is not always necessary, but it's used in other examples
-const { GeoPoint, TimeStamp, } = firebase.firestore
+const { TimeStamp, GeoPoint, } = firebase.firestore
 export {
-	GeoPoint, TimeStamp 
+	TimeStamp, GeoPoint 
 }
 
 // if using Firebase JS SDK < 5.8.0
-DB.settings({
+db.settings({
 	timestampsInSnapshots: true, 
 })
-/** END Firebase docs */
-

@@ -8,7 +8,6 @@
 <script>
 
 // @ is an alias to /src
-import {DB} from "../db.js"
 import HelloWorld from "@/components/HelloWorld.vue"
 
 export default {
@@ -18,7 +17,6 @@ export default {
 	},
 	created: function()
 	{
-		console.log(DB)
 	},
 }
 </script>
