@@ -3,6 +3,9 @@ import { vuexfireMutations, firestoreAction } from "vuexfire"
 import { db } from "../db"
 import Vuex from "vuex"
 
+// Sub Modules
+import layout from 'store/layout'
+
 Vue.use(Vuex)
 
 export default new Vuex.Store({
@@ -26,5 +29,8 @@ export default new Vuex.Store({
 			}
 		),
 	},
-	modules: {},
+	modules:
+	{
+		layout
+	},
 })
