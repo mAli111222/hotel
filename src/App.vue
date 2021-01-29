@@ -3,7 +3,7 @@
 		<!-- TODO: Tie into vue comps -->
 		<AppSection
 			:isShowing="$store.state.layout.isShowingBanner"
-			@click="$store.state.layout.isShowingBanner = !$store.state.layout.isShowingBanner"
+			@click="$store.state.layout.setIsShowingBanner(!$store.state.layout.isShowingBanner)"
 		>
 			<div id="top-banner" />
 		</AppSection>
@@ -25,7 +25,7 @@
 		</AppSection>
 		<AppSection
 			:isShowing="$store.state.layout.isShowingFooter"
-			@click="$store.state.layout.isShowingFooter = !$store.state.layout.isShowingFooter"
+			@click="$store.state.layout.setIsShowingFooter(!$store.state.layout.isShowingFooter)"
 		>
 			<div id="bottom-banner" />
 		</AppSection>
