@@ -10,7 +10,7 @@
 
 		<AppSection
 			styles="min-height: 20px"
-			:isCollapsed='isNavCollapsed'
+			:isCollapsed="isNavCollapsed"
 			is-showing
 			@click="isNavCollapsed = !isNavCollapsed"
 		>
@@ -18,7 +18,7 @@
 		</AppSection>
 
 		<AppSection
-			styles="flex: 1;"
+			styles="flex: 1; max-height: 4000px;"
 			is-showing
 		>
 			<router-view id="content-wrapper" />
@@ -50,9 +50,7 @@ export default {
 		}
 	},
 	computed:
-	{
-
-	},
+	{},
 	created: function()
 	{
 		console.log(this.$store.state.layout.isShowingBanner)
