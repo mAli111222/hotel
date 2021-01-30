@@ -1,17 +1,17 @@
 <template>
 	<div class="page-wrapper">
 		<h1>Testing Page</h1>
-		<hr />
+		<hr >
 		<h3>Vuex: Layout</h3>
-		<div class='section-content'>
+		<div class="section-content">
 			<div
-				class='button'
+				class="button"
 				@click="$store.commit('setIsShowingBanner', true)"
 			>
 				Show the top banner
 			</div>
 			<div
-				class='button'
+				class="button"
 				@click="$store.commit('setIsShowingFooter', true)"
 			>
 				Show the footer
@@ -35,8 +35,7 @@ export default {
 	computed:
 	{},
 	methods: 
-	{
-	},
+	{},
 }
 </script>
 

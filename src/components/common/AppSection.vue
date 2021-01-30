@@ -72,21 +72,22 @@ export default {
 <style lang="less">
 .content-section {
 	display: flex;
-	height: auto;
 	overflow: hidden;
 	width: 100%;
 
 	&.is-collapsed {
+	height: auto;
 		max-height: 10px;
-		transition: all 0.7s ease;
+		transition: all 0.7s ease-out;
 	}
 	&.is-hidden {
 		max-height: 0px;
-		transition: all 0.7s ease;
+		transition: all 0.7s ease-out;
 	}
 	&.is-showing {
-		max-height: 4000px;
-		transition: all 0.7s ease;
+		height: auto;
+		max-height: 200px;
+		transition: all 0.7s ease-out;
 	}
 }
 </style>

@@ -4,7 +4,7 @@ import { db } from "../db"
 import Vuex from "vuex"
 
 // Sub Modules
-import layout from 'store/layout'
+import layout from "store/layout"
 
 Vue.use(Vuex)
 
@@ -31,6 +31,6 @@ export default new Vuex.Store({
 	},
 	modules:
 	{
-		layout
+		layout,
 	},
 })

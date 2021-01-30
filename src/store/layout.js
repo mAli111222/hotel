@@ -1,10 +1,10 @@
-import Vue from 'vue'
+import Vue from "vue"
 
-function initialState()
+function initialState ()
 {
 	return {
-		bannerMessage: '',
-		footerMessage: '',
+		bannerMessage: "",
+		footerMessage: "",
 		isNavCollapsed: false,
 		isShowingBanner: false,
 		isShowingFooter: false,
@@ -17,33 +17,31 @@ export default
 	state: initialState(),
 
 	getters:
-	{
-	},
+	{},
 
 	mutations:
 	{
-		setIsNavCollapsed(state, value)
+		setIsNavCollapsed (state, value)
 		{
 			state.isNavCollapsed = value
 		},
 
-		setIsShowingBanner(state, value)
+		setIsShowingBanner (state, value)
 		{
 			state.isShowingBanner = value
 		},
 
-		setIsShowingFooter(state, value)
+		setIsShowingFooter (state, value)
 		{
 			state.isShowingFooter = value
 		},
 
-		setIsShowingNav(state, value)
+		setIsShowingNav (state, value)
 		{
 			state.isShowingNav = value
 		},
 	},
 
 	actions:
-	{
-	}
+	{},
 }
