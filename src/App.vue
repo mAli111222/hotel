@@ -8,11 +8,12 @@
 			<div id="top-banner" />
 		</AppSection>
 
+		<!-- Handle appSection click for navbar on chevron and ations instead.. -->
 		<AppSection
 			styles="min-height: 20px"
-			:isCollapsed="isNavCollapsed"
+			:isCollapsed="$store.state.layout.isNavCollapsed"
 			is-showing
-			@click="isNavCollapsed = !isNavCollapsed"
+			@click=""
 		>
 			<NavBar id="nav-wrapper" />
 		</AppSection>
