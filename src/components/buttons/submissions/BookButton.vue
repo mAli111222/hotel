@@ -18,7 +18,7 @@
 			<span
 				v-else
 				class="execute-text"
-				key="book"
+				key="booking"
 			>
 				Book
 			</span>
