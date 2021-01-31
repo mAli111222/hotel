@@ -43,5 +43,17 @@ export default
 	},
 
 	actions:
-	{},
+	{
+		/**
+		 * Just an example
+		 */
+		foo (state, {bar,})
+		{
+			Vue.set(
+				state.baz,
+				"entity",
+				bar
+			)
+		},
+	},
 }
