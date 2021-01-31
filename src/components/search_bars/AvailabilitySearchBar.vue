@@ -1,17 +1,24 @@
 <template>
-	<div
-		v-if="isLoading"
-		class="search-query"
+	<transition
+		name='fade'
+		mode="out-in"
 	>
-		loading...
-	</div>
-	<input
-		v-else
-		v-model="searchQuery"
-		class="search-query"
-		type="text"
-		placeholder="Search for Availability"
-	>
+		<div
+			v-if="isLoading"
+			class="search-query"
+			key="loading"
+		>
+			loading...
+		</div>
+		<input
+			v-else
+			v-model="searchQuery"
+			class="search-query"
+			key="booking"
+			type="text"
+			placeholder="Search for Availability"
+		>
+	</transition>
 </template>
 
 <script>
@@ -45,5 +52,12 @@ export default {
 	height: 50px;
 	text-align: center;
 	width: 80%;
+}
+
+.fade-enter-active, .fade-leave-active {
+	transition: opacity .2s;
+}
+.fade-enter, .fade-leave-to {
+	opacity: 0;
 }
 </style>
