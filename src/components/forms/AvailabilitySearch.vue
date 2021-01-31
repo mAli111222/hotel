@@ -15,7 +15,7 @@
 		>
 			<form class="search-box">
 				<AvailabilitySearchBar />
-				<BookButton />
+				<BookButton @click="handleAvailabilitySearch"/>
 			</form>
 		</div>
 	</div>
