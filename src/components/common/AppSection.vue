@@ -76,7 +76,7 @@ export default {
 	width: 100%;
 
 	&.is-collapsed {
-	height: auto;
+		height: auto;
 		max-height: 10px;
 		transition: all 0.7s ease-out;
 	}
