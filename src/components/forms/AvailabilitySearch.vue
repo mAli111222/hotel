@@ -47,7 +47,7 @@ export default {
 			try
 			{
 				// sleep for .5 seconds
-				await new Promise((r) => setTimeout(r, 500))
+				await new Promise((r) => setTimeout(r, 5000))
 				this.isLoading = false
 			}
 			catch (error)
