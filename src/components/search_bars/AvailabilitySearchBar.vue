@@ -1,5 +1,12 @@
 <template>
+	<div
+		v-if="isLoading"
+		class="search-query"
+	>
+		loading...
+	</div>
 	<input
+		v-else
 		v-model="searchQuery"
 		class="search-query"
 		type="text"

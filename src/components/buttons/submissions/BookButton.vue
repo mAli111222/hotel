@@ -1,14 +1,13 @@
 
 <template>
-	<div v-if="isLoading">
-		Loading
-	</div>
 	<div
-		v-else
 		class="search-execute"
 		@click="$emit('click')"
 	>
-		<span class="execute-text">
+		<!-- TODO: write up a transition here with computed class -->
+		<span
+			class="execute-text"
+		>
 			Book
 		</span>
 	</div>

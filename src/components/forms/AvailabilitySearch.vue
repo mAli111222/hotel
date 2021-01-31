@@ -3,19 +3,16 @@
 		class="search-wrapper"
 	>
 		<div
-			v-if="isLoading"
-			class="content-section"
-		>
-			<AvailabilitySearchBar is-loading />
-			<BookButton is-loading />
-		</div>
-		<div
-			v-else
 			class="content-section"
 		>
 			<form class="search-box">
-				<AvailabilitySearchBar />
-				<BookButton @click="handleAvailabilitySearch"/>
+				<AvailabilitySearchBar
+					:isLoading="isLoading"
+				/>
+				<BookButton
+					:isLoading="isLoading"
+					@click="handleAvailabilitySearch"
+				/>
 			</form>
 		</div>
 	</div>
@@ -80,10 +77,9 @@ export default {
 			display: flex;
 			flex-direction: column;
 			height: 100%;
-			text-align: center;
 			margin-top: 20px;
+			text-align: center;
 			width: 100%;
-
 		}
 	}
 }
