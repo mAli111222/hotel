@@ -13,7 +13,6 @@
 			styles="min-height: 20px"
 			:isCollapsed="$store.state.layout.isNavCollapsed"
 			is-showing
-			@click=""
 		>
 			<NavBar id="nav-wrapper" />
 		</AppSection>
@@ -54,7 +53,7 @@ export default {
 	{},
 	created: function()
 	{
-		console.log(this.$store.state.layout.isShowingBanner)
+		// console.log(this.$store.state.layout.isShowingBanner)
 	},
 }
 </script>
