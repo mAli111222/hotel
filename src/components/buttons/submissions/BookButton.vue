@@ -4,12 +4,25 @@
 		class="search-execute"
 		@click="$emit('click')"
 	>
-		<!-- TODO: write up a transition here with computed class -->
-		<span
-			class="execute-text"
+		<transition
+			name="fade"
+			mode="out-in"
 		>
-			Book
-		</span>
+			<span
+				v-if="isLoading"
+				class="execute-text"
+				key="loading"
+			>
+				Loading
+			</span>
+			<span
+				v-else
+				class="execute-text"
+				key="book"
+			>
+				Book
+			</span>
+		</transition>
 	</div>
 </template>
 
@@ -47,5 +60,13 @@ export default {
 		margin: auto;
 	}
 }
+
+.fade-enter-active, .fade-leave-active {
+	transition: opacity .2s;
+}
+.fade-enter, .fade-leave-to {
+	opacity: 0;
+}
+
 
 </style>
