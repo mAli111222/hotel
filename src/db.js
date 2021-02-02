@@ -4,7 +4,7 @@ import "firebase/firestore"
 // Get a Firestore instance
 export const db = firebase
 	.initializeApp({
-		projectId: "MY PROJECT ID", 
+		projectId: process.env.VUE_APP_FIREBASE_API_KEY,
 	})
 	.firestore()
 
